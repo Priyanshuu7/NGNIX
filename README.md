@@ -124,3 +124,42 @@ To work effectively with Nginx, familiarity with Docker (, , , ) and basic Linux
 This summary captures the essential steps and concepts for serving static content using Nginx, providing a clear guide for setting up and configuring a web server for static files.
 
 
+**Full Node.js Deployment: NGINX, SSL with Let's Encrypt**
+
+This video details deploying a full Node.js application using AWS and NGINX, including SSL setup with Let's Encrypt.  Here's a breakdown of the steps:
+
+**1. AWS Account Setup:**
+
+*   Create a free AWS account.  You'll need to provide credit card information, but AWS won't charge you unless you exceed free tier limits.  
+
+**2. Launching an EC2 Instance:**
+
+*   Launch an EC2 instance (Elastic Compute Cloud - a virtual server). Select a region closest to your location (e.g., Mumbai) for lower latency.  
+*   Choose an operating system (e.g., Ubuntu 22.04).  
+*   Select an instance type (e.g., t2.medium - 2 CPUs, 4GB RAM).  Larger instances are more expensive but offer better performance. 
+*   Create a key pair for secure access to your instance.  Keep this key pair safe; losing it means losing access to your instance.   
+*   Configure security groups to allow HTTP and HTTPS traffic.  
+*   Launch the instance.  It takes some time to become fully operational. 
+*   Associate a static Elastic IP address to your instance to maintain a consistent public IP address.   
+
+**3. Accessing and Setting up the Instance:**
+
+*   Connect to your instance using SSH (Secure Shell) via your key pair.  The method varies slightly depending on your operating system (Windows, macOS, Linux).    
+
+**4. Node.js and Application Deployment:**
+
+*   Update the system packages.    
+*   Install Node.js and npm (Node Package Manager).  
+*   Clone your Node.js project. 
+*   Install project dependencies using `npm install`. 
+*   Use `pm2` (process manager) to run your application in the background.       
+
+**5. NGINX Setup:**
+
+*   Install NGINX.  
+*   Configure NGINX to proxy requests to your Node.js application (port 8000).         
+
+**6. SSL Certificate with Let's Encrypt:**
+
+*   Obtain and install an SSL certificate using Certbot (Let's Encrypt client).       <chunk>483016d0-9db4-4c
+
