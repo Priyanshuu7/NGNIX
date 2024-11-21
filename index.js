@@ -1,5 +1,7 @@
 const express = require("express");
 const app = express();
+
+// port number //
 const port = 5000;
 
 
