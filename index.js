@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 express();
 
-// port number //
+// port number //number
 const port = 5000;
 
 // route code //
