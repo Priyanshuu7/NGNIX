@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-Exprss 
+
 // port number //numbernumber
 const port = 5000;
 
